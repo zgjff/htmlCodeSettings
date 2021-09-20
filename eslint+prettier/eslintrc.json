@@ -39,9 +39,11 @@
         ],
         "new-cap": [
             "error",
-            {
-                "capIsNewExceptions": ["Component", "Input"] // Angular 组建
-            }
+            "capIsNewExceptions": [// Angular 组建
+                "Component",
+                "Input",
+                "NgModule"
+            ]
         ]
     }
 }
