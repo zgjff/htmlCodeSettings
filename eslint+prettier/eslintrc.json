@@ -1,66 +1,128 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "indent": [
+          "error",
+          "tab"
+        ],
+        "quotes": [
+          "error",
+          "single"
+        ],
+        "semi": [
+          "error",
+          "never"
+        ],
+        "object-curly-spacing": [
+          "error",
+          "always",
+          {
+            "arraysInObjects": false,
+            "objectsInObjects": false
+          }
+        ],
+        "comma-dangle": [
+          "error",
+          "never"
+        ],
+        "no-tabs": [
+          "error",
+          {
+            "allowIndentationTabs": true
+          }
+        ],
+        "no-unused-vars": 2,
+        "no-duplicate-case": "error",
+        "lines-between-class-members": [
+          "error",
+          "always"
+        ]
+      }
     },
-    "extends": [
-        "google"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "@typescript-eslint"
-    ],
-    "rules": {
-      "indent": [
-        "error",
-        "tab"
+    {
+      "files": [
+        "*.html"
       ],
-      "quotes": [
-        "error",
-        "single"
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
       ],
-      "semi": [
-        "error",
-        "never"
-      ],
-      "object-curly-spacing": [
-        "error",
-        "always",
-        {
-          "arraysInObjects": false,
-          "objectsInObjects": false
-        }
-      ],
-      "new-cap": [
-        "error",
-        {
-          "capIsNewExceptions": [
-            // Angular 组件
-            "Component",
-            "Input",
-            "NgModule"
-          ]
-        }
-      ],
-      "comma-dangle": [
-        "error",
-        "never"
-      ],
-      "no-tabs": [
-        "error",
-        {
-          "allowIndentationTabs": true
-        }
-      ],
-      "no-unused-vars": 2,
-      "no-duplicate-case": "error",
-      "lines-between-class-members": [
-        "error",
-        "always"
-      ]
+      "rules": {
+        "indent": [
+          "error",
+          "tab"
+        ],
+        "quotes": [
+          "error",
+          "single"
+        ],
+        "semi": [
+          "error",
+          "never"
+        ],
+        "object-curly-spacing": [
+          "error",
+          "always",
+          {
+            "arraysInObjects": false,
+            "objectsInObjects": false
+          }
+        ],
+        "comma-dangle": [
+          "error",
+          "never"
+        ],
+        "no-tabs": [
+          "error",
+          {
+            "allowIndentationTabs": true
+          }
+        ],
+        "no-unused-vars": 2,
+        "no-duplicate-case": "error",
+        "lines-between-class-members": [
+          "error",
+          "always"
+        ]
+      }
     }
+  ]
 }
