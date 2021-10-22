@@ -15,35 +15,52 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "table"
-        ],
-        "quotes": [
-            "error",
-            "single" 
-        ],
-        "semi": [
-            "error",
-            "never" 
-        ],
-        "no-unused-vars": 2, 
-        "no-duplicate-case": "error",
-        "object-curly-spacing": [
-            "error",
-            "always",
-            {
-                "arraysInObjects": false,
-                "objectsInObjects": false
-            }
-        ],
-        "new-cap": [
-            "error",
-            "capIsNewExceptions": [// Angular 组建
-                "Component",
-                "Input",
-                "NgModule"
-            ]
-        ]
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always",
+        {
+          "arraysInObjects": false,
+          "objectsInObjects": false
+        }
+      ],
+      "new-cap": [
+        "error",
+        {
+          "capIsNewExceptions": [
+            // Angular 组件
+            "Component",
+            "Input",
+            "NgModule"
+          ]
+        }
+      ],
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "no-tabs": [
+        "error",
+        {
+          "allowIndentationTabs": true
+        }
+      ],
+      "no-unused-vars": 2,
+      "no-duplicate-case": "error",
+      "lines-between-class-members": [
+        "error",
+        "always"
+      ]
     }
 }
