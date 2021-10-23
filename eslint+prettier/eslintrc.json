@@ -54,7 +54,7 @@
         ],
         "object-curly-spacing": [
           "error",
-          "always",
+          "never",
           {
             "arraysInObjects": false,
             "objectsInObjects": false
@@ -70,11 +70,19 @@
             "allowIndentationTabs": true
           }
         ],
-        "no-unused-vars": 2,
-        "no-duplicate-case": "error",
         "lines-between-class-members": [
           "error",
           "always"
+        ],
+        "no-unused-vars": 2,
+        "no-duplicate-case": "error",
+        "eol-last": [
+          "error",
+          "always"
+        ],
+        "space-before-function-paren": [
+          "error",
+          "never"
         ]
       }
     },
@@ -85,44 +93,7 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {
-        "indent": [
-          "error",
-          "tab"
-        ],
-        "quotes": [
-          "error",
-          "single"
-        ],
-        "semi": [
-          "error",
-          "never"
-        ],
-        "object-curly-spacing": [
-          "error",
-          "always",
-          {
-            "arraysInObjects": false,
-            "objectsInObjects": false
-          }
-        ],
-        "comma-dangle": [
-          "error",
-          "never"
-        ],
-        "no-tabs": [
-          "error",
-          {
-            "allowIndentationTabs": true
-          }
-        ],
-        "no-unused-vars": 2,
-        "no-duplicate-case": "error",
-        "lines-between-class-members": [
-          "error",
-          "always"
-        ]
-      }
+      "rules": {}
     }
   ]
 }
